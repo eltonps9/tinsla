@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 60px;
+    display: inline-flex;
+    position: fixed;
+}
+
+header .logo {
+    width: 25%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    color: #006400;
+}
+
+header .menu {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+header .menu ul {
+    display: inline-flex;
+}
+
+header .menu ul li a {
+    margin: 0px 20px;
+    color: #006400;
+    text-decoration: none;
+}
+
+header .menu--home {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+header .menu--home img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+/*main*/
+
+main {
+    height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+main .tela {
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .tela h1 {
+    color: #006600;
+    font-size: 40px;
+}
+
+main .tela p {
+    font-size: 20px;
+    color: #0a360a;
+}
+
+main .tela p a {
+    color: #0a360a;
+}
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 170px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .botoes {
+    display: flex;
+}
+
+footer .botoes .btn {
+    border-radius: 30px;
+    margin: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 50px;
+}
+
+footer .botoes a {
+    text-decoration: none;
+    margin: 0px 20px;
+}
+
+footer .botoes .btn--esq {
+    background-color: rgba(43, 42, 42, 0.712);
+}
+
+footer .botoes .btn--esq a {
+    color: lightgoldenrodyellow;
+}
+
+footer .botoes .btn--clr {
+    background-color: rgba(204, 202, 202, 0.712);
+}
+
+footer .botoes .btn--clr a {
+    color: rgb(22, 22, 22);
+}
+
+footer .pular {
+    width: 35px;
+    height: 30px;
+}
+
+footer .pular img {
+    width: 35px;
+    height: 20px;
+    animation-name: animação;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animação {
+    0% {
+        margin: 10px 0px 0px;
+    }
+    50% {
+        margin: 0px;
+    }
+    100% {
+        margin: 10px 0px 0px;
+    }
+}
+
+@media (max-width: 1100px) {
+    header .menu {
+        display: none;
+    }
+    header .logo {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 630px) {
+    footer .botoes {
+        flex-direction: column;
+    }
+    footer .botoes .btn {
+        margin: 10px 30px;
+    }
+    footer .pular {
+        width: 25px;
+        height: 20px;
+    }
+    footer {
+        bottom: 220px;
+    }
+    header .menu--home {
+        margin: 0px 30px;
+    }
+    header .logo {
+        font-size: 25px;
+    }
+    footer .botoes .btn {
+        width: 80vw;
+        height: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    header .logo {
+        font-size: 20px;
+    }
+    header .menu--home {
+        margin: 0px 20px;
+    }
+    main .tela p {
+        font-size: 15px;
+    }
+}
